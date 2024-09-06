@@ -1,11 +1,14 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
-output "instance_ami" {
-  value = aws_instance.ubuntu.ami
+output "vm_id" {
+  value = azurerm_virtual_machine.example.id
+  description = "The ID of the virtual machine"
 }
 
-output "instance_arn" {
-  value = aws_instance.ubuntu.arn
+output "vm_name" {
+  value = azurerm_virtual_machine.example.name
+  description = "The name of the virtual machine"
 }
 
+output "vm_public_ip" {
+  value = azurerm_public_ip.example.ip_address
+  description = "The public IP address of the virtual machine"
+}

@@ -1,18 +1,25 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
+variable "resource_group_name" {
+  type        = string
+  default     = "example-resources"
+}
 
-variable "region" {
-  description = "AWS region"
-  default     = "us-west-1"
+variable "location" {
+  type        = string
+  default     = "West US"
 }
 
 variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
+  type        = string
+  default     = "Standard_DS2_v2"
 }
 
 variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
+  type        = string
+  default     = "example-vm"
 }
 
+variable "vm_size" {
+  type        = string
+  default     = "Standard_DS2_v2"
+  description = "The size of the virtual machine"
+}

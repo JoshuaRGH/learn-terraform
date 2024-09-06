@@ -1,20 +1,17 @@
-# Copyright (c) HashiCorp, Inc.
-# SPDX-License-Identifier: MPL-2.0
-
 terraform {
-
+  /*
   cloud {
-    organization = "organization-name"
-
+    organization = "jrgh_org"
     workspaces {
       name = "learn-terraform"
     }
   }
+  /*
 
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.31.0"
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.0.2" # Adjust the version as needed
     }
   }
 
